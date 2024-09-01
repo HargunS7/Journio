@@ -1,20 +1,99 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-.navbar {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out; /* Adjusts the timing for a more fluid feel */
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light background for contrast */
+    color: #333;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#211f173e; /* Semi-transparent background */
-    /* backdrop-filter: blur(0px); Blur effect */
-    padding: 20px 25px;
-    /* border-radius: 15px; */
-    position: relative; /* Ensures navbar stays inside the section */
-    z-index: 2;
-    margin-top: 0%;
-}
+    padding: 10px 20px;
+    background-color: #333; /* Darker background for a professional look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
+    position: sticky; /* Keeps navbar fixed at the top */
+    top: 0;
+    z-index: 1000; /* Ensures navbar stays above other elements */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-brand:hover {
+    color: #f0a500; /* Subtle color change on hover for a premium touch */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .nav-link:hover {
+    background-color: #444;
+    color: #f0a500; /* Consistent hover color with the brand */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .navbar-toggler {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .navbar-toggler.active + .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust based on your navbar height */
+      right: 0;
+      background-color: #333;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 0 0 8px 8px;
+    }
+  }
+  
 #hotel-txt{
     color: #fff;
     text-align: center;
@@ -56,7 +135,7 @@
 }
 
 /* Line hover animation for both top and bottom */
-.menu li a::before,
+/* .menu li a::before,
 .menu li a::after {
     content: '';
     position: absolute;
@@ -81,7 +160,7 @@
 .menu li a:hover::after {
     visibility: visible;
     width: 100%;
-}
+} */
 
 .menu li a:hover {
     color: white;
