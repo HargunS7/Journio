@@ -7,9 +7,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#211f17; /* Semi-transparent background */
+    background-color:#211f173e; /* Semi-transparent background */
     /* backdrop-filter: blur(0px); Blur effect */
-    padding: 20px 30px;
+    padding: 20px 25px;
     /* border-radius: 15px; */
     position: relative; /* Ensures navbar stays inside the section */
     z-index: 2;
@@ -294,19 +294,20 @@ padding-bottom: 10%;
 .tm-review{
     background: #353535;
     padding-bottom: 5%;
-    
+    text-align: left;
 }
 
 .tm-review::after{
     content:" ";
-    display: block;
+    display: flex;
     clear: both;
 }
 
 .tm-revcon{
     float: left;
-    padding-left: 5%;
+    padding-left: 2%;
     max-width: 65%;
+    text-align: left;
 }
 
 .tm-revcon .b{
@@ -318,11 +319,13 @@ padding-bottom: 10%;
 .tm-revcon p{
     font-size: 1.5vw;
     color: #fff;
+    text-align: left;
 }
 
 .tm-rev{
     padding: 3% 0 0% 5%;
    max-width: 70%;
+   text-align: left;
  
 }
 
